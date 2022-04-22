@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700;900&display=swap');
+
+:root{
+    /*Colors*/
+    --primary: #696969;
+    --dark: #233506;
+    --light: #fff;
+    --bg: #fff;
+
+    /*Sizes*/
+    --content_Width: 1170px;
+
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #fff;
+}
+
+
+
+/*Каркас*/
+.content{
+    max-width: var(--content_Width);
+    padding: 0 16px;
+}
+
+/*Первый слайд-блок1*/
+.first-screen {
+}
+
+.first-screen__bg-segment {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 33%;
+    z-index: 0;
+    background-color: var(--primary);
+
+}
+
+.first-screen__bg-segment img{
+    transform: rotate(90deg);
+    position:absolute;
+    top: 127px;
+    left: -300px;
+    width: 1380px;
+    height: 797px;
+}
+    
