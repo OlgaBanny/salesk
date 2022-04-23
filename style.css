@@ -3,25 +3,31 @@
 :root{
     /*Colors*/
     --primary: #696969;
-    --dark: #233506;
-    --light: #fff;
-    --bg: #fff;
+    --dark: #060900;
+    --light: #ffffff;
+    --bg: rgb(197, 193, 193);
 
     /*Sizes*/
     --content_Width: 1170px;
 
 }
+/* Сбросили поля */
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
-
+/* Общие правила для боди, сслок */
 body{
     font-family: 'Raleway', sans-serif;
     background-color: #fff;
+    color: var(--dark);
+    font-size: 18px;
 }
-
+ .a {
+     color: var(--dark);
+     text-decoration: none;
+ }
 
 
 /*Каркас*/
@@ -30,8 +36,34 @@ body{
     padding: 0 16px;
 }
 
+.header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 18px;
+   padding: 20px 0;
+}
+
+.header__actions{
+display: flex;
+align-items: center;
+}
+/* кнопка */
+.button {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 16px 22px;
+    border-radius: 50px;
+    font-size: 18px;
+    line-height: 18px;
+}
+.button__light {
+    background-color: var(--primary);
+    color: var(--light);
+}
 /*Первый слайд-блок1*/
 .first-screen {
+    min-height: 100vh;
 }
 
 .first-screen__bg-segment {
@@ -40,7 +72,7 @@ body{
     bottom: 0;
     right: 0;
     width: 33%;
-    z-index: 0;
+    z-index: -1;
     background-color: var(--primary);
 
 }
@@ -48,9 +80,35 @@ body{
 .first-screen__bg-segment img{
     transform: rotate(90deg);
     position:absolute;
-    top: 127px;
-    left: -300px;
-    width: 1380px;
-    height: 797px;
+    top: 173px;
+    left: -249px;
+    width: 499px;
+    height: 371px;
 }
-    
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu line {
+    height: 20px;
+    width: 1px;
+    background-color: var(--dark);
+}
+.menu a{
+    margin-right: 36px;
+    color: var(--dark);  
+    text-decoration: none;
+}
+.menu a:not(:last-child) {
+    margin-right: 36px;
+    text-decoration: none;
+}
+
+
+/* Переиспользуемые элементы */
+.logo{
+    font-size: 46px;
+     font-weight: 600;
+}
