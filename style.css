@@ -6,6 +6,8 @@
     --dark: #060900;
     --light: #ffffff;
     --bg: rgb(197, 193, 193);
+    --bgc: #f5f5f5;
+
 
     /*Sizes*/
     --content_Width: 1170px;
@@ -16,7 +18,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 /* Общие правила для боди, сслок */
 body{
     font-family: 'Raleway', sans-serif;
@@ -28,14 +29,13 @@ body{
      color: var(--dark);
      text-decoration: none;
  }
-
-
 /*Каркас*/
 .content{
     max-width: var(--content_Width);
     padding: 0 16px;
+    width: 100%;
+    margin: 0 auto;
 }
-
 .header {
    display: flex;
    align-items: center;
@@ -43,7 +43,6 @@ body{
    font-size: 18px;
    padding: 20px 0;
 }
-
 .header__actions{
 display: flex;
 align-items: center;
@@ -63,9 +62,13 @@ align-items: center;
 }
 /*Первый слайд-блок1*/
 .first-screen {
+    position: relative;
     min-height: 100vh;
+    display: flex;
+    
 }
-
+.first-screen >* {
+}
 .first-screen__bg-segment {
     position: absolute;
     top: 0;
@@ -76,7 +79,6 @@ align-items: center;
     background-color: var(--primary);
 
 }
-
 .first-screen__bg-segment img{
     transform: rotate(90deg);
     position:absolute;
@@ -85,12 +87,35 @@ align-items: center;
     width: 499px;
     height: 371px;
 }
+.first-screen .content {
+    display: flex;
+    flex-direction: column;
 
+}
+.first-screen__content {
+    max-width: 1200px;
+    margin: auto 0;
+}
+.first-screen__content>*:not(:last-child) {
+margin-bottom: 40px;
+}
+.first-screen__title {
+    font-size: 64px;
+    line-height: 80px;
+    font-weight: normal;
+}
+.first-screen__span {
+    font-size: 84px;
+    line-height: 80px;
+    font-weight: bold;
+}
+.first-screen__description {
+line-height: 1.7em;
+}
 .menu {
     display: flex;
     align-items: center;
 }
-
 .menu line {
     height: 20px;
     width: 1px;
@@ -105,10 +130,54 @@ align-items: center;
     margin-right: 36px;
     text-decoration: none;
 }
+/* Второй слайд-блок2*/
+.products {
+padding: 120px 0;
+}
+.products__cards {
+margin-top: 80px;
+}
 
+.card__img {
+    width: var(--size);
+    height: calc(var(--size)*0.80);
+    overflow: hidden;
+    outline: 1px solid var(--primary);
+    border-radius: 10px;
+    background: center/100% auto;
+}
+
+.cart__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+.card__title {
+    font-size: 20px;
+    padding-right: 8px;
+}
+
+.card__footer {
+}
+.card__artikul {
+}
 
 /* Переиспользуемые элементы */
 .logo{
     font-size: 46px;
      font-weight: 600;
 }
+
+.title{
+    font-size: 70px;
+    line-height: 82px;
+    font-weight: 600;
+}
+
+.card {
+    --size: 270px;
+    width: var(--size);
+
+}
+
