@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;700;900&display=swap');
+@media all and (min-width: 40em) {
+    .card {
+      width: 50%;
+    }
 
 :root{
     /*Colors*/
@@ -136,11 +140,15 @@ padding: 120px 0;
 }
 .products__cards {
 margin-top: 80px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
 }
 
 .card__img {
     width: var(--size);
-    height: calc(var(--size)*0.80);
+    height: calc(var(--size)*0.70);
     overflow: hidden;
     outline: 1px solid var(--primary);
     border-radius: 10px;
@@ -176,8 +184,10 @@ margin-top: 80px;
 }
 
 .card {
+    display: flex;
+    flex-wrap: wrap;
     --size: 270px;
     width: var(--size);
+    font-family:'Times New Roman', Times, serif;
 
 }
-
